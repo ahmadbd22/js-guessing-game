@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <!-- Bootstrap CSS -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">
+     <!-- Custom CSS -->
+     <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-6 col-lg-6 m-5 mx-auto">
+                <!-- Start Card -->
+                <div class="card shadow">
+                    <div class="card-header">
+                        <h1 class="text-center">Number Guessing Game</h1>
+                    </div>
+                    <div class="card-body"> 
+                      <p class="card-text text-justify">
+                         We will selected random number for you between 1 to 5. You have 5 attempts to guess the right number. We will help you in every guess that your guess was high or low to guess the correct number. Best of luck. 
+                     </p>
+                     <button type="button" id="start" class="btn rounded btn-secondary mb-3">START GAME</button>
+                     <button type="button" id="reset" class="resetBtn btn rounded btn-secondary mb-3" onclick="window.location.reload()">RELOAD</button>
+                     <!-- Start playGround where the game start -->
+                     <div class="playGround" id="playGround">
+                        <div id="highOrLow"></div>
+                        <form action="#">
+                            <div class="form-group">
+                                <label for="userInput">Enter Your Number: </label>
+                                <input type="text" class="form-control" id="userInput" placeholder="Enter Your Number">
+                            </div>
+                            <input type="submit" id="check" class="btn rounded btn-secondary mb-2" value="CHECK">
+                        </form>
+                        <div id="allGuesses">Your Guess: </div>
+                        <div>Your Remaining Attempt: <span class="lastResult">5</span></div>
+                     </div> <!--end playGround-->
+                    </div> <!--end card-body-->
+                </div> <!--end card-->
+            </div> <!--end col-->
+        </div> <!--end row-->
+    </div><!--end container-->
+    <script src="js/main.js"></script>
+</body>
+</html>
